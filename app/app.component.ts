@@ -12,7 +12,7 @@ import { Task } from './task.model';
 
     <task-list [childTaskList]="masterTaskList" (clickSender)="editTask($event)"></task-list>
     <edit-task [childSelectedTask]="selectedTask" (doneButtonClickedSender)="finishedEditing()"></edit-task>
-    <new-task (newTaskSender)="addTask($event)" ></new-task>
+    <new-task (newTaskSender)="addTask($event)"></new-task>
   </div>
   `,
   styles: [

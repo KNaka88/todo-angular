@@ -8,8 +8,8 @@ import { Task } from './task.model';
     <option value="allTasks">Al Tasks</option>
     <option value="completedTasks">Completed Tasks</option>
     <option value="incompleteTasks" selected="selected">Incompleted Tasks</option>
+  </select>
   <ul>
-    <li>Hello</li>
     <li (click)="isDone(currentTask)" *ngFor="let currentTask of childTaskList | completeness:filterByCompleteness">{{currentTask.description}}
     <input *ngIf="currentTask.done === true" type="checkbox" checked (click)="toggleDone(currentTask, false)"/>
     <input *ngIf="currentTask.done === false" type="checkbox" (click)="toggleDone(currentTask, true)"/>
